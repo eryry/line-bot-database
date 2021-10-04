@@ -94,10 +94,10 @@ app.post('/callback', function(req, res) {
       var imageUrl = "https://i.imgur.com/I5AZqHV.png";
       var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
       var answers = ["回答1", "回答2", "回答3", "回答4"];
-      // sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
+      sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
 
       // データベースを使って返信する場合、こちらのコメントを解除してください
-      //databaseSample(req, message_text);
+      databaseSample(req, message_text);
       
       ////////////////////
       // ぐるなびAPIパート //
