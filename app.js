@@ -81,19 +81,19 @@ app.post('/callback', function(req, res) {
       // message = message_text + "[" + message_text.length + "文字]";
 //       sendMessage.send(req, [messageTemplate.textMessage(message)]);
       
-      var url = "https://i.imgur.com/I5AZqHV.png"
-      sendMessage.send(req, [
-        messageTemplate.imageMessage(url)
-      ]);
+//       var url = "https://i.imgur.com/I5AZqHV.png"
+//       sendMessage.send(req, [
+//         messageTemplate.imageMessage(url)
+//       ]);
 
       // データベースを使う場合、下記のコードはコメントアウトしてください
       //sendMessage.send(req, [messageTemplate.textMessage(message), messageTemplate.quickMessage("質問に答えてね！")]);
 
       // // flexメッセージを使う
-      // var title = "質問";
-      // var imageUrl = "https://i.imgur.com/I5AZqHV.png";
-      // var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
-      // var answers = ["回答1", "回答2", "回答3", "回答4"];
+      var title = "質問";
+      var imageUrl = "https://i.imgur.com/I5AZqHV.png";
+      var choices = ["選択肢1", "選択肢2", "選択肢3", "選択肢4"];
+      var answers = ["回答1", "回答2", "回答3", "回答4"];
       // sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
 
       // データベースを使って返信する場合、こちらのコメントを解除してください
