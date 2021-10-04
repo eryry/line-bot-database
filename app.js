@@ -75,16 +75,16 @@ app.post('/callback', function(req, res) {
     // 返事を生成する関数
     function(req, displayName, message_id, message_type, message_text) {
 
-      var message = "";
-      message = "hello, " + displayName + "さん"; // helloと返事する
+//       var message = "";
+//       message = "hello, " + displayName + "さん"; // helloと返事する
       // message = message_text; // おうむ返しする
       // message = message_text + "[" + message_text.length + "文字]";
-      sendMessage.send(req, [messageTemplate.textMessage(message)]);
+//       sendMessage.send(req, [messageTemplate.textMessage(message)]);
       
-      // var url = "https://i.imgur.com/I5AZqHV.png"
-      // sendMessage.send(req, [
-      //   messageTemplate.imageMessage(url)
-      // ]);
+      var url = "https://i.imgur.com/I5AZqHV.png"
+      sendMessage.send(req, [
+        messageTemplate.imageMessage(url)
+      ]);
 
       // データベースを使う場合、下記のコードはコメントアウトしてください
       //sendMessage.send(req, [messageTemplate.textMessage(message), messageTemplate.quickMessage("質問に答えてね！")]);
