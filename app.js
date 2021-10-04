@@ -97,7 +97,7 @@ app.post('/callback', function(req, res) {
       sendMessage.send(req, [messageTemplate.customQuestionMessage(title, imageUrl, choices, answers)]);
 
       // データベースを使って返信する場合、こちらのコメントを解除してください
-      databaseSample(req, message_text);
+//       databaseSample(req, message_text);
       
       ////////////////////
       // ぐるなびAPIパート //
